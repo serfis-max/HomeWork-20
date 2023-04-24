@@ -72,7 +72,7 @@
         <td><input asp-for="Adress" type="text" form="upd_@item.Id" value="@item.Adress" /></td>
         
         <td>
-          <form asp-controller="Main" asp-action="UpdateUser" method="put" id="upd_@item.Id" asp-antiforgery="false" X-HTTP-Method-Override="PUT">
+          <form asp-controller="Main" asp-action="UpdateUser" method="put" id="upd_@item.Id" asp-antiforgery="false">
             <input type="submit" value="Изменить" />
           </form>
         </td>
