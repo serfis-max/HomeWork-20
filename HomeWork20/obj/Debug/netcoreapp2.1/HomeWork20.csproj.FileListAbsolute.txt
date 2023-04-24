@@ -1,0 +1,14 @@
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\bin\Debug\netcoreapp2.1\HomeWork20.deps.json
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\bin\Debug\netcoreapp2.1\HomeWork20.runtimeconfig.json
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\bin\Debug\netcoreapp2.1\HomeWork20.runtimeconfig.dev.json
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\bin\Debug\netcoreapp2.1\HomeWork20.dll
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.csprojAssemblyReference.cache
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.csproj.CoreCompileInputs.cache
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.RazorAssemblyInfo.cache
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.RazorAssemblyInfo.cs
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.AssemblyInfoInputs.cache
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.AssemblyInfo.cs
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.RazorTargetAssemblyInfo.cache
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\bin\Debug\netcoreapp2.1\HomeWork20.pdb
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.dll
+C:\Users\Severin\source\repos\HomeWork20\HomeWork20\obj\Debug\netcoreapp2.1\HomeWork20.pdb

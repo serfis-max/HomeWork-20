@@ -1,0 +1,97 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+div {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+h1 span {
+    color: white;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin: 0;
+    font-size: 2vw;
+}
+td {
+    border: 1px solid gray;
+    align-content: center;
+    padding: 10px;
+}
+.BodyBackground {
+    background-image: url('../lib/img/WritingTechnology.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.Button {
+    margin: 5px 1px 1px 15px;
+}
+.HeaderAbs {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+}
+.Image {
+    height: 40%;
+    width: 40%;
+}
+.TableMain {
+    display: compact;
+    border-collapse: collapse;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+}
+.TableMain td {
+    border-top: 1px solid darkgray;
+    border-right: hidden;
+    border-bottom: 1px solid darkgray;
+    border-left: hidden;
+}
+.TableUser {
+    border-collapse: separate;
+    margin: 10px 1px 5px 15px
+}
+.TableUser td {
+    border: 0;
+    padding: 5px 5px 5px 0px;
+    text-align: left;
+}
+.Text {
+    width: 170px;
+    padding: 1px;
+    margin: 1px;
+}
+.TextArea {
+    height: 48px;
+    min-height: 16px;
+    max-height: 48px;
+    width: 172px;
+    min-width: 172px;
+    max-width: 172px;
+    padding: 1px;
+    margin: 1px;
+}
+.TextAreaOneRaw {
+    height: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    width: 182px;
+    min-width: 182px;
+    max-width: 182px;
+    resize:none;
+    padding: 1px;
+    margin: 1px;
+}
