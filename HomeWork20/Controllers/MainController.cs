@@ -96,7 +96,7 @@ namespace HW_201.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async Task<IActionResult> UpdateUser2(User user)
+        public async Task<IActionResult> UpdateNoDataLoss(User user)
         {
             string temp;
             using (var db = new DataContext())
