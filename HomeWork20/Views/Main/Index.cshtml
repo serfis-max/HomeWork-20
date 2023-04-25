@@ -9,52 +9,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phone numbers</title>
   <link href="~/css/StylesList.css" rel="stylesheet" />
-  <handlers>
-    <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
-    <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
-  </handlers>
+  <script type="text/javascript" src="~/lib/js/Requests.js"></script>
 </head>
 
 <body class="BodyBackground">
   <div>
     <h1>
-      <span>
-        Phone book
-      </span>
+      <span>Phone book</span>
     </h1>
   </div>
 
   <div>
-    <form asp-controller="Main" asp-action="AddNewUser" method="post">
+    
       <table class="TableMain">
         <tr>
           <td>
             <label>Surname</label><br />
-            <input asp-for="Surname" value="" required />
+            <input asp-for="Surname" value="" required form="create"/>
           </td>
           <td>
             <label>FirstName</label><br />
-            <input asp-for="FirstName" value="" required />
+            <input asp-for="FirstName" value="" required form="create"/>
           </td>
           <td>
             <label>Patronymic</label><br />
-            <input asp-for="Patronymic" value="" />
+            <input asp-for="Patronymic" value="" form="create"/>
           </td>
           <td>
             <label>Phone number</label><br />
-            <input asp-for="PhoneNumber" value="" />
+            <input asp-for="PhoneNumber" value="" form="create"/>
           </td>
           <td>
             <label>Adress</label><br />
-            <input asp-for="Adress" value="" />
+            <input asp-for="Adress" value="" form="create"/>
           </td>
           <td>
             <br />
-            <input type="submit" value="Добавить" />
+            <form asp-controller="Main" asp-action="AddNewUser" method="post" id="create">
+              <input type="submit" value="Добавить" />
+            </form>
+          </td>
+          <td>
+            <br />
+            <form asp-controller="Main" asp-action="RandomRecord" method="post">
+              <input type="submit" value="Случайно" />
+            </form>
           </td>
         </tr>
       </table>
-    </form>
+
   </div>
 
   <table class="TableMain">
@@ -63,29 +66,29 @@
       <tr>
         <td align="center">
           <a href="@Url.Action("UsersInfo", new { id = item.Id })" class="btn btn-primary btn-lg">@item.Id</a>
-          <input asp-for="Id" type="hidden" form="upd_@item.Id" value="@item.Id" />
+          <input id="dataPut" asp-for="Id" type="hidden" form="upd_@item.Id" value="@item.Id" />
         </td>
-        <td><input asp-for="Surname" type="text" form="upd_@item.Id" value="@item.Surname" /></td>
-        <td><input asp-for="FirstName" type="text" form="upd_@item.Id" value="@item.FirstName" /></td>
-        <td><input asp-for="Patronymic" type="text" form="upd_@item.Id" value="@item.Patronymic" /></td>
-        <td><input asp-for="PhoneNumber" type="text" form="upd_@item.Id" value="@item.PhoneNumber" /></td>
-        <td><input asp-for="Adress" type="text" form="upd_@item.Id" value="@item.Adress" /></td>
-        
+        <td><input id="updSurname_@item.Id" asp-for="Surname" type="text" form="upd_@item.Id" value="@item.Surname" /></td>
+        <td><input id="updFirstName_@item.Id" asp-for="FirstName" type="text" form="upd_@item.Id" value="@item.FirstName" /></td>
+        <td><input id="updPatronymic_@item.Id" asp-for="Patronymic" type="text" form="upd_@item.Id" value="@item.Patronymic" /></td>
+        <td><input id="updPhoneNumber_@item.Id" asp-for="PhoneNumber" type="text" form="upd_@item.Id" value="@item.PhoneNumber" /></td>
+        <td><input id="updAdress_@item.Id" asp-for="Adress" type="text" form="upd_@item.Id" value="@item.Adress" /></td>
+
         <td>
-          <form asp-controller="Main" asp-action="UpdateUser" method="put" id="upd_@item.Id" asp-antiforgery="false">
-            <input type="submit" value="Изменить" />
+          <form asp-controller="Main" asp-action="UpdateUser2" method="put" id="upd_@item.Id" asp-antiforgery="false">
+            <input type="submit" value="Изменить" onclick="customRequest('PUT',@item.Id, true, '' )" />
           </form>
         </td>
 
         <td>
-          <form asp-controller="Main" asp-action="DeleteMethod" method="delete" asp-antiforgery="false">
-            <input asp-for="Id" type="hidden" value="@item.Id" />
-            <input type="submit" value="Удалить" />
+          <form asp-controller="Main" asp-action="DeleteMethod" method="delete" id="del_@item.Id" asp-antiforgery="false">
+            <input type="hidden" asp-for="Id" value="@item.Id" form="del_@item.Id" />
+            <input type="submit" value="Удалить" onclick="customRequest('DELETE',@item.Id, true, '')" />
           </form>
         </td>
       </tr>
     }
   </table>
-
+  
 </body>
 </html>

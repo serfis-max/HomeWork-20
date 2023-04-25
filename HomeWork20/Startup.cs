@@ -22,7 +22,7 @@ namespace HW_201
                 r =>
                 {
                     r.MapRoute(
-                        name: "main",
+                        name: "default",
                         template: "{controller=Main}/{action=Index}"
                         );
                 });

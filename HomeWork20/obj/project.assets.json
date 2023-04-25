@@ -12547,11 +12547,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\HomwWorks\\HomeWork20\\HomeWork20\\HW_201.csproj",
+      "projectUniqueName": "E:\\Downloads\\HomeWork-20-main\\HomeWork20\\HW_201.csproj",
       "projectName": "HW_201",
-      "projectPath": "E:\\C#\\HomwWorks\\HomeWork20\\HomeWork20\\HW_201.csproj",
+      "projectPath": "E:\\Downloads\\HomeWork-20-main\\HomeWork20\\HW_201.csproj",
       "packagesPath": "C:\\Users\\Severin\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\HomwWorks\\HomeWork20\\HomeWork20\\obj\\",
+      "outputPath": "E:\\Downloads\\HomeWork-20-main\\HomeWork20\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -8,15 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User_@Model.Id</title>
   <link href="~/css/StylesList.css" rel="stylesheet" />
+  <script type="text/javascript" src="~/lib/js/Requests.js"></script>
 </head>
 
 <body>
   <div>
     <img class="Image" src="~/lib/img/PhoneBook.jpg" alt="Alternate Text">
     <h1 class="HeaderAbs">
-      <span>
-        @Model.Id @Model.Surname @Model.FirstName @Model.Patronymic
-      </span>
+      <span>@Model.Id @Model.Surname @Model.FirstName @Model.Patronymic</span>
     </h1>
   </div>
 
@@ -24,37 +23,37 @@
     <tr>
       <td>Surname</td>
       <td>
-        <input asp-for="Surname" value="@Model.Surname" required form="upd" class="Text" />
+        <input id="updSurname_@Model.Id" asp-for="Surname" value="@Model.Surname" required form="upd" class="Text" />
       </td>
     </tr>
     <tr>
       <td>FirstName</td>
       <td>
-        <input asp-for="FirstName" value="@Model.FirstName" required form="upd" class="Text" />
+        <input id="updFirstName_@Model.Id" asp-for="FirstName" value="@Model.FirstName" required form="upd" class="Text" />
       </td>
     </tr>
     <tr>
       <td>Patronymic</td>
       <td>
-        <input asp-for="Patronymic" value="@Model.Patronymic" form="upd" class="Text" />
+        <input id="updPatronymic_@Model.Id" asp-for="Patronymic" value="@Model.Patronymic" form="upd" class="Text" />
       </td>
     </tr>
     <tr>
       <td>Phone number</td>
       <td>
-        <input asp-for="PhoneNumber" value="@Model.PhoneNumber" form="upd" class="Text" />
+        <input id="updPhoneNumber_@Model.Id" asp-for="PhoneNumber" value="@Model.PhoneNumber" form="upd" class="Text" />
       </td>
     </tr>
     <tr>
       <td>Adress</td>
       <td>
-        <input asp-for="Adress" value="@Model.Adress" form="upd" class="Text" />
+        <input id="updAdress_@Model.Id" asp-for="Adress" value="@Model.Adress" form="upd" class="Text" />
       </td>
     </tr>
     <tr>
       <td style="text-align:left; vertical-align:top;">Description</td>
       <td>
-        <textarea asp-for="Description" form="upd" rows="3" class="TextArea">@Model.Description</textarea>
+        <textarea id="updDescriptions_@Model.Id" asp-for="Description" form="upd" rows="3" class="TextArea">@Model.Description</textarea>
       </td>
     </tr>
   </table>
@@ -62,15 +61,15 @@
   <table class="TableUser">
     <tr>
       <td>
-        <form asp-controller="Main" asp-action="UpdateUser" method="put" id="upd">
+        <form asp-controller="Main" asp-action="UpdateUser" method="put" id="upd" asp-antiforgery="false">
           <input asp-for="Id" type="hidden" value="@Model.Id" form="upd" />
-          <input type="submit" value="Изменить" />
+          <input type="submit" value="Изменить" onclick="customRequest('PUT',@Model.Id, false, '/Main/UsersInfo?id=@Model.Id')" />
         </form>
       </td>
       <td>
-        <form asp-controller="Main" asp-action="DeleteUser" method="delete">
+        <form asp-controller="Main" asp-action="DeleteUser" method="delete" asp-antiforgery="false">
           <input asp-for="Id" type="hidden" value="@Model.Id" />
-          <input type="submit" value="Удалить" />
+          <input type="submit" value="Удалить" onclick="customRequest('DELETE',@Model.Id, false, '/Main/UsersInfo?id=@Model.Id')" />
         </form>
       </td>
     </tr>
