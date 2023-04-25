@@ -75,7 +75,7 @@
         <td><input id="updAdress_@item.Id" asp-for="Adress" type="text" form="upd_@item.Id" value="@item.Adress" /></td>
 
         <td>
-          <form asp-controller="Main" asp-action="UpdateUser2" method="put" id="upd_@item.Id" asp-antiforgery="false">
+          <form asp-controller="Main" asp-action="UpdateNoDataLoss" method="put" id="upd_@item.Id" asp-antiforgery="false">
             <input type="submit" value="Изменить" onclick="customRequest('PUT',@item.Id, true, '' )" />
           </form>
         </td>
