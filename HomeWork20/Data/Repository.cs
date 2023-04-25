@@ -88,6 +88,7 @@ namespace HW_201.Data
         {
             return new User()
             {
+                Id = 0,
                 Surname = $"{GetNotation(Name.Middle)}",
                 FirstName = $"{GetNotation(Name.First)}",
                 Patronymic = $"{GetNotation(Name.Last)}",
